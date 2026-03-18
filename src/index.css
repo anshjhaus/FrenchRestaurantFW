@@ -466,12 +466,25 @@ footer {
   }
   .hero-title {
     font-size: clamp(3rem, 16vw, 5.2rem);
-    line-height: 1.06;
+    line-height: 1.12;
     margin-bottom: 1.25rem;
+  }
+  .hero-line {
+    display: block;
+  }
+  .hero-word-wrap {
+    padding-top: 0.12em;
+  }
+  .hero-word {
+    display: inline-block;
+    margin-right: 0.18em;
+  }
+  .hero-word:last-child {
+    margin-right: 0;
   }
   .hero-line:last-child {
     font-size: 0.88em;
-    line-height: 1;
+    line-height: 1.06;
   }
   .hero-sub {
     font-size: 0.95rem;

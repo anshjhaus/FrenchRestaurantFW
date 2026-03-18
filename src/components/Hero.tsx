@@ -20,7 +20,6 @@ export function Hero() {
             <span key={line.join('-')} className="hero-line">
               {line.map((word, wordIndex) => {
                 const isEmphasis = lineIndex === 1
-                const delay = 160 + (lineIndex * 2 + wordIndex) * 140
 
                 return (
                   <span key={word} className="hero-word-wrap">

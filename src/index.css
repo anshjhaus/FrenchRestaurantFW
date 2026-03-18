@@ -216,8 +216,10 @@ section { padding: 7rem 2rem; }
 #menu { background: var(--ink-soft); }
 #menu .section-inner { text-align: center; }
 .menu-tabs {
-  display: flex; justify-content: center; gap: 0; margin: 3rem 0;
+  display: flex; justify-content: center; gap: 0; margin: 3rem auto;
   border: 1px solid var(--rule);
+  width: fit-content;
+  max-width: 100%;
 }
 .menu-tab {
   padding: 12px 32px; font-size: 10px; letter-spacing: 0.2em;
@@ -369,6 +371,11 @@ footer {
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+@media (hover: none), (pointer: coarse) {
+  body { cursor: auto; }
+  #cursor { display: none; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   section { padding: 5rem 1rem; }
@@ -402,6 +409,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 2rem 0;
+    width: 100%;
   }
   .menu-tab {
     min-width: 0;

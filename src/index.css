@@ -474,14 +474,12 @@ footer {
   }
   .hero-word-wrap {
     padding-top: 0.12em;
-  }
-  .hero-word {
-    display: inline-block;
     margin-right: 0.18em;
   }
-  .hero-word:last-child {
+  .hero-line .hero-word-wrap:last-child {
     margin-right: 0;
   }
+  .hero-word { display: inline-block; }
   .hero-line:last-child {
     font-size: 0.88em;
     line-height: 1.06;

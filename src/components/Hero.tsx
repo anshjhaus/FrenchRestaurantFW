@@ -1,5 +1,3 @@
-import type { CSSProperties } from 'react'
-
 const heroLines = [
   ['An', 'evening'],
   ['worth', 'remembering.'],
@@ -13,7 +11,7 @@ export function Hero() {
       <div className="hero-vignette" />
 
       <div className="hero-content">
-        <div className="hero-badge reveal reveal-fade" style={{ '--reveal-delay': '80ms' } as CSSProperties}>
+        <div className="hero-badge">
           Fort Worth · French Cuisine Since 1985
         </div>
 
@@ -26,10 +24,7 @@ export function Hero() {
 
                 return (
                   <span key={word} className="hero-word-wrap">
-                    <span
-                      className={`hero-word reveal reveal-hero-word${isEmphasis ? ' is-emphasis' : ''}`}
-                      style={{ '--reveal-delay': `${delay}ms` } as CSSProperties}
-                    >
+                    <span className={`hero-word${isEmphasis ? ' is-emphasis' : ''}`}>
                       {word}
                     </span>
                   </span>
@@ -39,7 +34,7 @@ export function Hero() {
           ))}
         </h1>
 
-        <p className="hero-sub reveal reveal-fade" style={{ '--reveal-delay': '560ms' } as CSSProperties}>
+        <p className="hero-sub">
           Classic French cuisine by Chef Pascal Paviani in the heart of Fort Worth's Cultural District.
         </p>
 
@@ -47,8 +42,7 @@ export function Hero() {
           href="https://resy.com/cities/dfw/saint-emilion"
           target="_blank"
           rel="noopener noreferrer"
-          className="hero-cta reveal reveal-fade"
-          style={{ '--reveal-delay': '680ms' } as CSSProperties}
+          className="hero-cta"
         >
           Reserve a Table
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

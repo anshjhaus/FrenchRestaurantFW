@@ -25,12 +25,13 @@ export function Hero() {
                 const delay = 160 + (lineIndex * 2 + wordIndex) * 140
 
                 return (
-                  <span
-                    key={word}
-                    className={`hero-word reveal reveal-hero-word${isEmphasis ? ' is-emphasis' : ''}`}
-                    style={{ '--reveal-delay': `${delay}ms` } as CSSProperties}
-                  >
-                    {word}
+                  <span key={word} className="hero-word-wrap">
+                    <span
+                      className={`hero-word reveal reveal-hero-word${isEmphasis ? ' is-emphasis' : ''}`}
+                      style={{ '--reveal-delay': `${delay}ms` } as CSSProperties}
+                    >
+                      {word}
+                    </span>
                   </span>
                 )
               })}
@@ -54,11 +55,6 @@ export function Hero() {
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
-      </div>
-
-      <div className="hero-scroll reveal reveal-fade" style={{ '--reveal-delay': '820ms' } as CSSProperties}>
-        <div className="hero-scroll-line" />
-        <span>Scroll</span>
       </div>
     </section>
   )

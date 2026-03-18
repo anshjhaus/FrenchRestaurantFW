@@ -134,6 +134,8 @@ nav.scrolled { background: rgba(13,9,5,0.97); padding: 1.25rem 3rem; }
   font-size: clamp(3.5rem, 9vw, 8rem);
   line-height: 1.08; color: var(--cream);
   margin-bottom: 1.5rem; letter-spacing: -0.01em;
+  padding-top: 0.12em;
+  overflow: visible;
 }
 .hero-line {
   display: block;
@@ -142,7 +144,6 @@ nav.scrolled { background: rgba(13,9,5,0.97); padding: 1.25rem 3rem; }
 .hero-word {
   display: inline-block;
   margin-right: 0.22em;
-  padding-top: 0.06em;
   will-change: transform, opacity;
 }
 .hero-word:last-child { margin-right: 0; }

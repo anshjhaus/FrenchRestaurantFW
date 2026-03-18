@@ -43,7 +43,7 @@ export function Hours() {
           <div className="map-embed-wrap">
             <iframe
               title="Saint-Émilion location"
-              src="https://www.google.com/maps?q=3617+W+7th+St,+Fort+Worth,+TX+76107&output=embed"
+              src="https://maps.google.com/maps?q=Saint+Emilion+Restaurant+Fort+Worth+TX&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

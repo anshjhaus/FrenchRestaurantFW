@@ -18,7 +18,7 @@ export function Hero() {
         <h1 className="hero-title">
           {heroLines.map((line, lineIndex) => (
             <span key={line.join('-')} className="hero-line">
-              {line.map((word, wordIndex) => {
+              {line.map((word) => {
                 const isEmphasis = lineIndex === 1
 
                 return (

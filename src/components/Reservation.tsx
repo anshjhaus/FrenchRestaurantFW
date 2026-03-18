@@ -21,7 +21,9 @@ export function Reservation() {
         <div className="gold-rule reveal" style={{ margin: '0 auto' }} />
 
         <p className="body-text reveal" style={{ margin: '1.5rem auto 0', textAlign: 'center' }}>
-          Reservations are accepted up to 30 days in advance, online via Resy.
+          Reservations are taken online only through Resy, up to 30 days in advance.
+          Make sure you receive a confirmation email from Resy, and please review the reservation
+          and cancellation policies before finalizing your booking.
         </p>
 
         <div className="res-form reveal">
@@ -66,11 +68,8 @@ export function Reservation() {
         </a>
 
         <p className="res-note reveal">
-          For parties of 7 or more, private dining, or same-day enquiries<br />
-          please call{' '}
-          <a href="tel:8177372781" style={{ color: 'var(--gold)' }}>
-            (817) 737-2781
-          </a>
+          No phone reservations. We also accept walk-ins if space allows, and if you call ahead,
+          we&apos;ll hold a table for 20 minutes.
         </p>
       </div>
     </section>

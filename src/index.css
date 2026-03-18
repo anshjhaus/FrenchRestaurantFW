@@ -311,7 +311,9 @@ section { padding: 7rem 2rem; }
   transition: border-color 0.2s;
   -webkit-appearance: none; appearance: none;
   color-scheme: dark;
+  text-align: left;
 }
+.res-input[type="date"]::-webkit-date-and-time-value { text-align: left; }
 .res-input:focus { border-bottom-color: var(--gold); }
 .res-input option { background: var(--ink); }
 .res-cta {

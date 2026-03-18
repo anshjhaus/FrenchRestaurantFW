@@ -34,7 +34,7 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Classic French cuisine by Chef Pascal Paviani in the heart of Fort Worth's Cultural District.
+          Classic French cuisine by Chef Pascal Paviani in the heart of Fort Worth.
         </p>
 
         <a

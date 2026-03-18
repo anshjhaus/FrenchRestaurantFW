@@ -52,9 +52,6 @@ export function Hours() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <p className="body-text" style={{ marginTop: '2rem', fontSize: '0.9rem' }}>
-            Located in Fort Worth's Cultural District, steps from the Kimbell Art Museum and the Modern Art Museum. Valet available Thursday through Sunday.
-          </p>
         </div>
       </div>
     </section>

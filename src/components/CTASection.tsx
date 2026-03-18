@@ -62,7 +62,7 @@ export function CTASection() {
               style={{ fontFamily: "'Jost', sans-serif", fontWeight: 300 }}
             >
               Classic French cuisine by Chef Pascal Paviani. Thursday through Sunday,
-              dinner service in the Cultural District.
+              dinner service in Fort Worth.
             </p>
 
             {/* CTA button */}

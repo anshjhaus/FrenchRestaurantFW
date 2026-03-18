@@ -3,7 +3,6 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react'
 const stats = [
   { value: 40, suffix: '+', label: 'Years in Fort Worth' },
   { value: 500, suffix: '+', label: 'Labels in our cellar' },
-  { value: 12, suffix: '', label: 'Tables in the dining room' },
 ]
 
 const images = [

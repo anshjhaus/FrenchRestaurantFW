@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { useState } from 'react'
 import { menuData, tabs, type TabKey } from '../data/menu'
 
@@ -14,8 +15,8 @@ export function Menu() {
     <section id="menu">
       <div className="section-inner">
         <span className="eyebrow reveal">Prix Fixe · $59</span>
-        <h2 className="section-title reveal">The Menu</h2>
-        <div className="gold-rule reveal" />
+        <h2 className="section-title reveal reveal-blur">The Menu</h2>
+        <div className="gold-rule reveal reveal-line" />
 
         <p className="menu-intro reveal">
           Tonight we propose a menu of classic French favorites and daily specials from Chef Pascal.
@@ -39,19 +40,21 @@ export function Menu() {
           <p className="menu-pricing-key">{pricingKey[activeTab]}</p>
         )}
 
-        {tabs.map(({ key }) => (
-          <div key={key} className={`menu-grid${activeTab === key ? ' active' : ''}`}>
-            {menuData[key].map((item, i) => (
-              <div key={i} className="menu-item">
-                <div className="menu-item-top">
-                  <span className="menu-item-name">{item.name}</span>
-                  <span className="menu-item-price">{item.price}</span>
-                </div>
-                <p className="menu-item-desc">{item.desc}</p>
+        <div className="menu-grid active">
+          {menuData[activeTab].map((item, i) => (
+            <div
+              key={`${activeTab}-${item.name}`}
+              className="menu-item reveal reveal-fade-up"
+              style={{ '--reveal-delay': `${Math.floor(i / 2) * 120}ms` } as CSSProperties}
+            >
+              <div className="menu-item-top">
+                <span className="menu-item-name">{item.name}</span>
+                <span className="menu-item-price">{item.price}</span>
               </div>
-            ))}
-          </div>
-        ))}
+              <p className="menu-item-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
 
         <p className="menu-note reveal">
           Salade et Fromage — garden greens in vinaigrette maison, two cheeses and fig-walnut confiture — included with every menu

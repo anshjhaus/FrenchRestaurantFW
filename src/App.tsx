@@ -8,14 +8,17 @@ import { Reservation } from './components/Reservation'
 import { Hours } from './components/Hours'
 import { Footer } from './components/Footer'
 import { useCursor } from './hooks/useCursor'
+import { useScrollProgress } from './hooks/useScrollProgress'
 import { useScrollReveal } from './hooks/useScrollReveal'
 
 function App() {
   useCursor()
+  useScrollProgress()
   useScrollReveal()
 
   return (
     <>
+      <div id="scroll-progress" />
       <div id="cursor" />
       <Nav />
       <Hero />

@@ -2,6 +2,9 @@ import { useEffect } from 'react'
 
 export function useCursor(cursorId = 'cursor') {
   useEffect(() => {
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    if (!canHover) return
+
     const cursor = document.getElementById(cursorId)
     if (!cursor) return
 

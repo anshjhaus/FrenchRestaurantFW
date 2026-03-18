@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type CSSProperties } from 'react'
 
 export function Reservation() {
   const today = new Date().toISOString().split('T')[0]
@@ -15,10 +15,10 @@ export function Reservation() {
     <section id="reservation">
       <div className="section-inner">
         <span className="eyebrow reveal">Reservations</span>
-        <h2 className="section-title reveal">
+        <h2 className="section-title reveal reveal-blur">
           Join us for<br /><em>dinner</em>
         </h2>
-        <div className="gold-rule reveal" style={{ margin: '0 auto' }} />
+        <div className="gold-rule reveal reveal-line" style={{ margin: '0 auto' }} />
 
         <p className="body-text reveal" style={{ margin: '1.5rem auto 0', textAlign: 'center' }}>
           Reservations are taken online only through Resy, up to 30 days in advance.
@@ -26,8 +26,8 @@ export function Reservation() {
           and cancellation policies before finalizing your booking.
         </p>
 
-        <div className="res-form reveal">
-          <div className="res-field">
+        <div className="res-form">
+          <div className="res-field reveal reveal-fade-up" style={{ '--reveal-delay': '0ms' } as CSSProperties}>
             <label className="res-label" htmlFor="date">Date</label>
             <input
               className="res-input"
@@ -38,7 +38,7 @@ export function Reservation() {
               onChange={e => setDate(e.target.value)}
             />
           </div>
-          <div className="res-field">
+          <div className="res-field reveal reveal-fade-up" style={{ '--reveal-delay': '100ms' } as CSSProperties}>
             <label className="res-label" htmlFor="guests">Guests</label>
             <select
               className="res-input"
@@ -56,7 +56,8 @@ export function Reservation() {
         </div>
 
         <a
-          className="res-cta"
+          className="res-cta reveal reveal-fade-up"
+          style={{ '--reveal-delay': '200ms' } as CSSProperties}
           href={resyUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -67,7 +68,7 @@ export function Reservation() {
           </svg>
         </a>
 
-        <p className="res-note reveal">
+        <p className="res-note reveal reveal-fade" style={{ '--reveal-delay': '300ms' } as CSSProperties}>
           No phone reservations. We also accept walk-ins if space allows, and if you call ahead,
           we&apos;ll hold a table for 20 minutes.
         </p>

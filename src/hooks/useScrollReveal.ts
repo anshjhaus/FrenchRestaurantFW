@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 export function useScrollReveal(selector = '.reveal') {
   useEffect(() => {
-    const elements = document.querySelectorAll<HTMLElement>(selector)
+    const observed = new WeakSet<Element>()
 
     const observer = new IntersectionObserver(
       entries => {
@@ -13,11 +13,33 @@ export function useScrollReveal(selector = '.reveal') {
           }
         })
       },
-      { threshold: 0.12 }
+      { threshold: 0.08 }
     )
 
-    elements.forEach(el => observer.observe(el))
+    const observeElements = () => {
+      const elements = document.querySelectorAll<HTMLElement>(selector)
 
-    return () => observer.disconnect()
+      elements.forEach(el => {
+        if (observed.has(el) || el.classList.contains('visible')) return
+        observed.add(el)
+        observer.observe(el)
+      })
+    }
+
+    observeElements()
+
+    const mutationObserver = new MutationObserver(() => {
+      observeElements()
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      mutationObserver.disconnect()
+      observer.disconnect()
+    }
   }, [selector])
 }

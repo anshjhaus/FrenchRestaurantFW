@@ -8,12 +8,12 @@ export function Hours() {
   return (
     <section id="hours">
       <div className="section-inner">
-        <div className="reveal">
+        <div className="reveal reveal-fade-up">
           <span className="eyebrow">Visit Us</span>
           <h2 className="section-title">
             Hours &<br /><em>Location</em>
           </h2>
-          <div className="gold-rule" />
+          <div className="gold-rule reveal reveal-line" />
 
           <table className="hours-table">
             <tbody>
@@ -39,7 +39,7 @@ export function Hours() {
           </div>
         </div>
 
-        <div className="reveal">
+        <div className="reveal reveal-right">
           <div className="map-embed-wrap">
             <iframe
               title="Saint-Émilion location"

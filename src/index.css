@@ -446,6 +446,24 @@ footer {
   #cursor { display: none; }
 }
 
+@media (min-width: 769px) and (max-width: 1400px) {
+  nav {
+    padding: 1.5rem 2rem;
+  }
+  nav.scrolled {
+    padding: 1rem 2rem;
+  }
+  .nav-links {
+    gap: 1.75rem;
+  }
+  .hero-content {
+    padding-top: 6rem;
+  }
+  .hero-badge {
+    margin-bottom: 2rem;
+  }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   section { padding: 5rem 1rem; }

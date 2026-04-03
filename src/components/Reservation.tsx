@@ -46,11 +46,12 @@ export function Reservation() {
               value={guests}
               onChange={e => setGuests(e.target.value)}
             >
-              {[1, 2, 3, 4, 5, 6].map(n => (
+              {[1, 2, 3, 4, 5, 6, 7].map(n => (
                 <option key={n} value={String(n)}>
                   {n} {n === 1 ? 'guest' : 'guests'}
                 </option>
               ))}
+              <option value="8">8+ guests</option>
             </select>
           </div>
         </div>
